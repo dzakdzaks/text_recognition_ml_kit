@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp">
+
+            <ImageView
+                android:id="@+id/image_preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.dzakdzaks.firebasemessaging.lib.GraphicOverlay
+                android:id="@+id/graphic_overlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="@id/image_preview"
+                app:layout_constraintLeft_toLeftOf="@id/image_preview"
+                app:layout_constraintRight_toRightOf="@id/image_preview"
+                app:layout_constraintTop_toTopOf="@id/image_preview" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:text="Result:"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:textIsSelectable="true"
+            android:textSize="22sp"
+            tools:text="Text Result" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_take_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_button"
+                android:enabled="false"
+                android:padding="12dp"
+                android:text="take picture"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btn_pick_galerry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_button"
+                android:enabled="false"
+                android:padding="12dp"
+                android:text="Open gallery"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btn_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_button"
+                android:enabled="false"
+                android:padding="12dp"
+                android:text="Create PDF"
+                android:textColor="@android:color/white" />
+
+            <!--        <Button-->
+            <!--            android:id="@+id/btn_text_recog"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:background="@drawable/bg_button"-->
+            <!--            android:padding="12dp"-->
+            <!--            android:text="text recog"-->
+            <!--            android:layout_marginStart="6dp"-->
+            <!--            android:textColor="@android:color/white"-->
+            <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--            app:layout_constraintLeft_toRightOf="@id/btn_take_picture" />-->
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
