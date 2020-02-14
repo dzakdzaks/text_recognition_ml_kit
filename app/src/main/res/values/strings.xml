@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FirebaseMessaging</string>
+    <string name="fcm_token">FCM Token: %s</string>
 </resources>
